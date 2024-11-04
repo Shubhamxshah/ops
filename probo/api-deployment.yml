@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: api
-          image: shubhamxshah/api-bopro:latest # Replace with your actual Docker image and tag
+          image: shubhamxshah/api-bopro:d27011aa6654f4825f342c8ffc4a701eb4d4c7a7
           ports:
             - containerPort: 3000
           env: # Correct placement of the env section

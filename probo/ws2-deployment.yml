@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: ws2
-          image: shubhamxshah/ws2-bopro:latest # Replace with your actual Docker image and tag
+          image: shubhamxshah/ws2-bopro:d27011aa6654f4825f342c8ffc4a701eb4d4c7a7
           ports:
             - containerPort: 3002
           env: # Correct placement of the env section
