@@ -18,7 +18,7 @@ spec:
         - name: ws2
           image: shubhamxshah/ws2-bopro:latest # Replace with your actual Docker image and tag
           ports:
-            - containerPort: 8080
+            - containerPort: 3002
           env: # Correct placement of the env section
             - name: REDIS_HOST
               value: "redis://redis-service:6379"

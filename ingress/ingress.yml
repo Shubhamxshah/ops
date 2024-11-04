@@ -5,6 +5,12 @@ metadata:
   namespace: default
   annotations:
     nginx.ingress.kubernetes.io/rewrite-target: /$2
+    nginx.ingress.kubernetes.io/proxy-read-timeout: "3600"
+    nginx.ingress.kubernetes.io/proxy-send-timeout: "3600"
+    nginx.ingress.kubernetes.io/proxy-http-version: "1.1"
+    nginx.ingress.kubernetes.io/proxy-set-headers: |
+      Upgrade $http_upgrade;
+      Connection "upgrade";
 spec:
   ingressClassName: nginx
   rules:
@@ -18,3 +24,12 @@ spec:
             name: nginx-service
             port:
               number: 80
+      - path: /ws(/|$)(.*)
+        pathType: ImplementationSpecific
+        backend:
+          service:
+            name: ws2-service # Name of the WebSocket service
+            port:
+              number: 3002        # Port of the WebSocket service
+
+
