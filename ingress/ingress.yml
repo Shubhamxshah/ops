@@ -21,9 +21,9 @@ spec:
         pathType: ImplementationSpecific
         backend:
           service:
-            name: nginx-service
+            name: api-service
             port:
-              number: 80
+              number: 3000
       - path: /ws(/|$)(.*)
         pathType: ImplementationSpecific
         backend:
