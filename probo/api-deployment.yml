@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: api
-          image: shubhamxshah/api-bopro:2c6733198e305adc63a5e9ef647b458d5468470e
+          image: shubhamxshah/api-bopro:fcede2cfb4a14fd9d8990aabeba1b5664220c54b
           ports:
             - containerPort: 3001
           env: # Correct placement of the env section
