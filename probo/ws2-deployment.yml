@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: ws2
-          image: shubhamxshah/ws2-bopro:fcede2cfb4a14fd9d8990aabeba1b5664220c54b
+          image: shubhamxshah/ws2-bopro:654073baec62f4913068ba31d14d4edd85cc1e6f
           ports:
             - containerPort: 3002
           env: # Correct placement of the env section
