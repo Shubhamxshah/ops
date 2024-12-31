@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: engine
-        image: shubhamxshah/engine-bopro:a07e7b56e3596ce554a8cd3055fd8512de43a3e2
+        image: shubhamxshah/engine-bopro:01b1e5aa190befa76178ceeda8729ed9370fb372
         env:
         - name: REDIS_HOST
           value: "redis://redis-service:6379"
