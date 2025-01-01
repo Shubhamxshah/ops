@@ -8,6 +8,7 @@ metadata:
     nginx.ingress.kubernetes.io/proxy-read-timeout: "3600"
     nginx.ingress.kubernetes.io/proxy-send-timeout: "3600"
     nginx.ingress.kubernetes.io/proxy-http-version: "1.1"
+    nginx.ingress.kubernetes.io/use-regex: "true"
     nginx.ingress.kubernetes.io/proxy-set-headers: |
       Upgrade $http_upgrade;
       Connection "upgrade";
@@ -31,12 +32,11 @@ spec:
             name: ws2-service # Name of the WebSocket service
             port:
               number: 3002        # Port of the WebSocket service
-      - path: /
-        pathType: ImplementationSpecific
-        backend:
-          service:
-            name: frontend-service # Name of the frontend service
-            port:
-              number: 3000        # Port of the frontend service
-
+      - path: / 
+        pathType: Prefix 
+        backend: 
+          service: 
+            name: frontend-service
+            port: 
+              number: 80
 
