@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: api
-          image: shubhamxshah/frontend-bopro:cbff9f43dce2075fe3ed4e0ffdefeb3d079ad27d
+          image: shubhamxshah/frontend-bopro:85cb700677b00b5834fd9513206c324cdf591a3a
           ports:
             - containerPort: 3000
 ---
