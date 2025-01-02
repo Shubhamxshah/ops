@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: db
-          image: shubhamxshah/db-bopro:85cb700677b00b5834fd9513206c324cdf591a3a
+          image: shubhamxshah/db-bopro:4f9b023ae9494e9c571ad5471546e5ae52a00c07
           env:
             - name: REDIS_HOST
               value: "redis://redis-service:6379"
