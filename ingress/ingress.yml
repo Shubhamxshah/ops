@@ -32,8 +32,8 @@ spec:
             name: ws2-service # Name of the WebSocket service
             port:
               number: 3002        # Port of the WebSocket service
-      - path: / 
-        pathType: Prefix 
+      - path: /()(.*) 
+        pathType: ImplementationSpecific 
         backend: 
           service: 
             name: frontend-service
